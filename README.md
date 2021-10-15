@@ -74,5 +74,5 @@ Copyright 2021 Ben Dunham
 
 ## Support and contact details
 
-* [Chynna Lew](github.com/bendunhampdx) 
+* [Ben Dunham](github.com/bendunhampdx) 
 * <bendunhampdx@gmail.com>
