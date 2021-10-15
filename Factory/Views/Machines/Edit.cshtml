@@ -18,11 +18,12 @@
 
   @Html.LabelFor(model => model.MachineName)
   @Html.EditorFor(model => model.MachineName)
-  
+
   <p>@Html.LabelFor(model => model.InspectionDate)</p>
   <p>@Html.EditorFor(model =>model.InspectionDate)</p>
 
   <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
 
