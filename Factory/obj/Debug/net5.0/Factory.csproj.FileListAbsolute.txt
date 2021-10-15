@@ -47,3 +47,7 @@
 /Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.Views.pdb
 /Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.csproj.CopyComplete
 /Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.genruntimeconfig.cache
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Razor/Views/Engineers/Delete.cshtml.g.cs
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Razor/Views/Engineers/Edit.cshtml.g.cs
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Razor/Views/Machines/Delete.cshtml.g.cs
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Razor/Views/Machines/Edit.cshtml.g.cs

@@ -43,5 +43,50 @@ namespace Factory.Controllers
             .FirstOrDefault(machine => machine.MachineId == id);
         return View(thisMachine);
     }
+    public ActionResult Edit(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+      return View(thisMachine);
+    }
+    [HttpPost]
+    public ActionResult Edit(Machine machine)
+    {
+      _db.Entry(machine).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+        public ActionResult Delete(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+      return View(thisMachine);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+      _db.Machines.Remove(thisMachine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+    [HttpPost]    
+    public ActionResult AddEngineer(Machine Machine, int EngineerId)
+    {
+      if (EngineerId != 0)
+      {
+        _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = Machine.MachineId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public ActionResult DeleteEngineer(int joinId)
+    {
+      var joinEntry = _db.MachineEngineer.FirstOrDefault(entry => entry.MachineEngineerId == joinId);
+      _db.MachineEngineer.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
