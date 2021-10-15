@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using University.Models;
+using Factory.Models;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace Factory.Controllers
 {
-  public class FactoryController : Controller
+  public class EngineersController : Controller
   {
     private readonly FactoryContext _db;
-    public FactoryController(FactoryContext db)
+    public EngineersController(FactoryContext db)
     {
       _db = db;
     }
@@ -20,7 +21,8 @@ namespace Factory.Controllers
     }
     public ActionResult Create()
     {
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
+      return View();
     }
     [HttpPost]
     public ActionResult Create(Engineer engineer, int MachineId)
@@ -37,13 +39,13 @@ namespace Factory.Controllers
 
     public ActionResult Details(int id)
     {
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
       ViewBag.NoMachines = _db.Machines.ToList().Count == 0;
         var thisEngineer = _db.Engineers
-          .Include(engineer => engineer.JoinEntities)
-          .ThenInclude(join => join.Machine)
-          .FirstOrDefault(engineer => engineer.EngineerId == id);
-          return View(thisEngineer);
+            .Include(engineer => engineer.JoinEntities)
+            .ThenInclude(join => join.Machine)
+            .FirstOrDefault(engineer => engineer.EngineerId == id);
+        return View(thisEngineer);
     }
   }
 }

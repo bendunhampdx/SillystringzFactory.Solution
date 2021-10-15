@@ -1,0 +1,48 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Machine Details</h2>
+
+<h3>@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model =>model.MachineName)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>No Engineers are associated with this machine</p>
+}
+else 
+{
+  <h4>Engineers working on this machine: </h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Engineer.EngineerName</li>
+  }
+  </ul>
+}
+@if(ViewBag.NoStudents)
+{
+  <p>There are no engineers currently working on this machine...</p>
+}
+else
+{
+  @using (Html.BeginForm("AddEngineer", "Machines"))
+  {
+    @Html.HiddenFor(model => model.MachineId)
+
+    @Html.Label("Add Engineer ")
+    @Html.DropDownList("EngineerId")
+
+    <input type="submit" value="save"/>
+  }
+}
+
+
+<p>@Html.ActionLink("Back to machines", "Index")</p>
+<p>@Html.ActionLink("Back to engineers", "Index")</p>
+<p>@Html.ActionLink("Add a new engineer", "Create", "Engineers")</p>
+<p>@Html.ActionLink("Edit this machine", "Edit", new {id = Model.CourseId})</p>
+<p>@Html.ActionLink("Delete this machine", "Delete", new {id = Model.CourseId})</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

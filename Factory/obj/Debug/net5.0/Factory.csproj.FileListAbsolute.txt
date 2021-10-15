@@ -1,0 +1,8 @@
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.csproj.AssemblyReference.cache
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.GeneratedMSBuildEditorConfig.editorconfig
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.AssemblyInfoInputs.cache
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.AssemblyInfo.cs
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.csproj.CoreCompileInputs.cache
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.MvcApplicationPartsAssemblyInfo.cache
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.RazorAssemblyInfo.cache
+/Users/benjamindunham/Desktop/epicodus/week-11/SillyStringzFactory.Solution/Factory/obj/Debug/net5.0/Factory.RazorAssemblyInfo.cs

@@ -10,14 +10,14 @@
 
 @using (Html.BeginForm())
 {
-  <p>@Html.LabelFor(model => model.Name)</p>
-  <p>@Html.TextBoxFor(model => model.Name)</p>
+  <p>@Html.LabelFor(model => model.EngineerName)</p>
+  <p>@Html.TextBoxFor(model => model.EngineerName)</p>
 
   <p>@Html.LabelFor(model => model.IsActive)</p>
   <p>@Html.TextBoxFor(model => model.IsActive)</p>
 
-  @* <p>@Html.Label("Select Machine")</p>
-  <p>@Html.DropDownList("MachineId")</p> *@
+  <p>@Html.Label("Select Machine")</p>
+  <p>@Html.DropDownList("MachineId")</p>
 
   <input type="submit" value="Add a new engineer" class="btn btn-success" />
 }
