@@ -13,7 +13,7 @@ namespace Factory.Models
     public int EngineerId { get; set; }
     public string EngineerName { get; set; }
 
-    public bool IsActive { get; set; }
+    public string IsActive { get; set; }
 
     // public virtual ICollection<MachineEngineer> joinEntities { get; }
 
